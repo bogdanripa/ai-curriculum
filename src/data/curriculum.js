@@ -152,8 +152,9 @@ const curriculum = [
       },
       {
         id: 13, title: "Claude Skills", subtitle: "On-demand capabilities that don't bloat the prompt", duration: "2–3 hours",
-        tutorial: { title: "Anthropic Docs: Claude Skills & Custom Instructions", url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering", description: "Now that you know Claude Code, learn how Skills package capabilities into on-demand modules. Create a simple skill by writing a SKILL.md file that teaches Claude a specific workflow. Compare context usage vs. MCP — skills load just-in-time while MCP schemas are always present." },
+        tutorial: { title: "Build a lesson plan generator skill (Codecademy)", url: "https://www.codecademy.com/article/how-to-build-claude-skills", description: "Build a complete Claude Skill that generates structured lesson plans. You'll create the SKILL.md file with YAML frontmatter (name, description, trigger conditions), write the instruction body, add a templates/ folder with lesson_template.md, and an examples/ folder with sample outputs. Package it, upload it, and test it live in Claude." },
         extras: [
+          { label: "Anthropic: Prompt engineering docs", url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering" },
           { label: "Claude.ai: Custom styles and project instructions", url: "https://support.anthropic.com/en/articles/9517075-what-are-projects" },
         ],
         keyTakeaway: "Skills are just-in-time documentation Claude reads when needed. MCPs preload all schemas into context. Skills scale better with many capabilities.",
@@ -161,8 +162,9 @@ const curriculum = [
       },
       {
         id: 14, title: "Claude Computer Use and Cowork", subtitle: "AI that operates your actual computer", duration: "2–3 hours",
-        tutorial: { title: "Anthropic: Computer Use Documentation", url: "https://docs.anthropic.com/en/docs/build-with-claude/computer-use", description: "Start with Anthropic's official computer use docs. Then try Cowork — Anthropic's desktop tool for non-developers. Have it automate a multi-step task: organize files, fill a spreadsheet from a website, or navigate a legacy admin UI. Think about which of your DevOps workflows involve manual clicking that could be automated." },
+        tutorial: { title: "Automate real tasks with Claude Cowork (DataCamp)", url: "https://www.datacamp.com/tutorial/claude-cowork-tutorial", description: "Use Claude Cowork to automate three real tasks hands-on: organize files on your computer, generate formatted documents from scattered notes, and automate browser tasks like extracting data from websites. You'll grant Cowork access to a local folder and watch it autonomously plan and execute multi-step workflows." },
         extras: [
+          { label: "Anthropic: Computer Use API docs", url: "https://docs.anthropic.com/en/docs/build-with-claude/computer-use" },
           { label: "Anthropic: Cowork (desktop automation tool)", url: "https://www.anthropic.com/products/cowork" },
           { label: "Claude in Chrome (browsing agent)", url: "https://www.anthropic.com/products/claude-in-chrome" },
         ],
