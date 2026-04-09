@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import curriculum from "../data/curriculum";
 import PhaseSection from "./PhaseSection";
 
 export default function AICurriculum() {
   const [expandedLesson, setExpandedLesson] = useState(null);
-  const [completed, setCompleted] = useState({});
+  const [completed, setCompleted] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("ai-curriculum-progress")) || {};
+    } catch {
+      return {};
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("ai-curriculum-progress", JSON.stringify(completed));
+  }, [completed]);
 
   const totalLessons = curriculum.reduce((sum, p) => sum + p.lessons.length, 0);
   const completedCount = Object.values(completed).filter(Boolean).length;
